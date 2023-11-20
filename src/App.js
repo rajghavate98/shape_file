@@ -8,6 +8,7 @@ export default function App() {
 
   const handleChange = async (e) => {
     setData(await extractShapes(e.target.files));
+
   };
 
   return (

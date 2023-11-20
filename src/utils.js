@@ -28,9 +28,16 @@ const extractShapes = async (files) => {
         return null;
       });
 
-    _result.data = _formatShape(_data);
-
-    console.log(_formatShape(_data));
+    if (_data.length>0) {
+      _data.forEach(element => {
+        _result.data = _formatShape(element);
+        console.log( _result.data)
+      });
+    }
+    else{
+      _result.data = _formatShape(_data);
+    }
+   
 
     if (_result.hasError) return _result;
 
