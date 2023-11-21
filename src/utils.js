@@ -29,10 +29,10 @@ const extractShapes = async (files) => {
       });
 
     if (_data.length>0) {
-      _data.forEach(element => {
-        _result.data = _formatShape(element);
-        console.log( _result.data)
-      });
+      // _data.forEach(element => {
+      //   _result.data = _formatShape(element);
+      // });
+      _result.data = _data.map.call(_data, _formatShape)
     }
     else{
       _result.data = _formatShape(_data);
